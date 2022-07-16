@@ -1,0 +1,17 @@
+v1=c(1,2,3)
+v2=c("A","B","C")
+V3=c(T,F,T)
+print(v1)
+print(v2)
+print(v3)
+      
+##matrix
+m1=matrix(1:20,nrow=4,ncol=5,byrow=T)
+m2=matrix(1:6,nrow=3,ncol=2,byrow=T)
+m3=matrix(1:4,nrow=2,ncol=2)
+print(m1)
+print(m2)
+print(m3)
+#####labeling
+row.names(m1)=c("a","b","c","d")
+print(m1)
