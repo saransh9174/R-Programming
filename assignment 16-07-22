@@ -21,3 +21,6 @@ v1=c(1,2,3)
 sum(v1)
 prod(v1)
 mean(v1)
+##iris
+data("iris")
+head("iris")
