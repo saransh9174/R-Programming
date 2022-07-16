@@ -13,5 +13,6 @@ print(m1)
 print(m2)
 print(m3)
 #####labeling
-row.names(m1)=c("a","b","c","d")
+rownames(m1)=c("a","b","c","d")
+colnames(m1)=c("e","f","g","h","i")
 print(m1)
