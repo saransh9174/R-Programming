@@ -16,3 +16,8 @@ print(m3)
 rownames(m1)=c("a","b","c","d")
 colnames(m1)=c("e","f","g","h","i")
 print(m1)
+##vector 
+v1=c(1,2,3)
+sum(v1)
+prod(v1)
+mean(v1)
