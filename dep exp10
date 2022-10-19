@@ -1,0 +1,38 @@
+head(airquality)
+df=data.frame(head(airquality,10))
+df
+
+summary(df)
+
+n=is.na(df)
+sum(n)
+
+df$Ozone[is.na(df$Ozone)]=mean(df$Ozone,na.rn=T)
+summary(df$Ozone)
+
+for(i in 1:nrow(df))
+{
+  if(is.na(df$Solar.R[i])){
+    df$Solar.R[1]=mean(df$Solar.R,na.rm=T)
+  }
+}
+
+summary(df$Solar.R)
+summary(df)
+
+
+##Merging
+df1=data.frame(cars=c('nissan','toyota'),year=c(1997,1996))
+df1
+df2=data.frame(model=c('Skyline','Supra'),year=c(1997,1996))
+df2
+#theta join
+merge(x=df1,y=df2,by="year")
+#left outer
+merge(x=df1,y=df2,by="year",all.x=TRUE)
+#right outer
+merge(x=df1,y=df2,by="year",all.y=TRUE)
+#FULL outer
+merge(x=df1,y=df2,by="year",all=TRUE)
+#Cartesian product
+merge(x=df1,y=df2,by=NULL)
